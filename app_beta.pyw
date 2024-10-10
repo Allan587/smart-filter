@@ -6,10 +6,17 @@ class SmartFilter(tk.Frame):
         super().__init__(master) 
         self.master = master
         self.pack()
-
+        
+        self.entradas()
+        
+    def entradas(self):
+        cantidad = tk.Entry(self, justify="left")
+        cantidad.grid(row=1, column=0)
+        
 def main():
     app = tk.Tk()
     app.title("SmartFilter")
+    app.geometry("600x400")
     
     ventana = SmartFilter(app)
     ventana.mainloop()
