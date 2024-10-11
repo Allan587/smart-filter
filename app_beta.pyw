@@ -112,7 +112,22 @@ class update_in:
         self.update_inventory.minsize(800, 500)
         self.update_inventory.config(bg="lightblue")
         self.update_inventory.geometry("800x500")
+        
         self.btn()
+        self.lbl()
+        self.ent()
+            
+    def lbl(self):
+        #inf = list("ID producto", "Nombre", "Marca", "Tipo", "Stock") Terminar y hacer un range con estos datos
+        
+        lbl_id = tk.Label(self.update_inventory, text="ID producto", bg="Grey").place(relx=0.05, rely=0.05, relwidth=0.1, relheight=0.05)
+        lbl_q = tk.Label(self.update_inventory, text="Cantidad", bg="Grey").place(relx=0.17, rely=0.05, relwidth=0.1, relheight=0.05)
+        
+    def ent(self):
+        
+        self.ent_id = tk.Entry(self.update_inventory).place(relx=0.05, rely=0.12, relwidth=0.1, relheight=0.05)
+        self.ent_q =  tk.Entry(self.update_inventory).place(relx=0.17, rely=0.12, relwidth=0.1, relheight=0.05)
+        
         
     def btn(self):
         cerrar_boton = tk.Button(self.update_inventory, text="Salir", bg="Red", fg="White", command=self.update_inventory.destroy).place(relx=0.85, rely=0.9, relwidth=0.1, relheight=0.05)
