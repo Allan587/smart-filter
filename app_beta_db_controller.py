@@ -13,7 +13,9 @@ class controller():
         self.insert()
         
     def insert(self):
-        cursor.execute("INSERT INTO ")
+        sql = '''INSERT INTO usuarios (id_product, product_name, product_brand, product_type, stock)
+            VALUES (%s, %s, %s, %s, %s)'''
+        values = ()
 # 5. Realizar una consulta
 cursor.execute('SELECT * FROM usuarios')
 
