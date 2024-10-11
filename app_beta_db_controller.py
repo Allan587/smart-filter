@@ -8,7 +8,8 @@ cursor = conexion.cursor()
 conexion.commit()
 
 class controller():
-    def __init__(self) -> None:
+    def __init__(self):
+        
         self.insert()
         
     def insert(self):
